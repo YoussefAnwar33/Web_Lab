@@ -1,0 +1,219 @@
+
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #11121c;
+  color: #f5f5fa;
+  min-height: 100vh;
+}
+
+/* ===== Main App ===== */
+.app {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px 25px;
+}
+
+/* ===== Heading ===== */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+.app > p {
+  text-align: center;
+  color: #a4a5b8;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* ===== Add Movie Section ===== */
+.add-movie {
+  display: flex;
+  gap: 12px;
+  margin: 30px 0 35px;
+  padding: 22px;
+  background: #1c1d2b;
+  border: 1px solid #303146;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.add-movie input {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== Inputs and Selects ===== */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #38394f;
+  border-radius: 8px;
+  font: inherit;
+  background: #141521;
+  color: #f5f5fa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #85869b;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #9875ff;
+  box-shadow: 0 0 0 3px rgba(152, 117, 255, 0.15);
+}
+
+select {
+  cursor: pointer;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 12px 18px;
+  background: #8260ed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #6d4bd4;
+  transform: translateY(-2px);
+}
+
+button:focus-visible {
+  outline: 2px solid #c5b5ff;
+  outline-offset: 3px;
+}
+
+/* ===== Empty State ===== */
+.app > p:last-child {
+  color: #a4a5b8;
+}
+
+/* ===== Movie Cards ===== */
+.movie-card {
+  position: relative;
+  background: linear-gradient(135deg, #202131, #191a27);
+  padding: 24px;
+  margin-bottom: 18px;
+  border: 1px solid #333449;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  overflow-wrap: anywhere;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.movie-card:hover {
+  border-color: #7862bd;
+  transform: translateY(-3px);
+}
+
+/* Movie title */
+.movie-card h2 {
+  display: inline-block;
+  margin: 0 12px 15px 0;
+  color: #ffffff;
+  font-size: 23px;
+  overflow-wrap: anywhere;
+}
+
+/* Remove button */
+.movie-card > button {
+  float: right;
+  padding: 8px 12px;
+  background: #39232e;
+  color: #ff9aaf;
+  border: 1px solid #633546;
+  font-size: 13px;
+}
+
+.movie-card > button:hover {
+  background: #603044;
+}
+
+/* ===== Rating Section ===== */
+.movie-card label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: bold;
+  color: #c1b2ff;
+  font-size: 14px;
+}
+
+.movie-card select {
+  max-width: 220px;
+}
+
+/* Star display */
+.stars {
+  margin: 12px 0;
+  font-size: 22px;
+  color: #ffc857;
+  letter-spacing: 2px;
+}
+
+/* ===== Review Section ===== */
+.movie-card textarea {
+  display: block;
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .app {
+    padding: 28px 16px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  .add-movie {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .add-movie button {
+    width: 100%;
+  }
+
+  .movie-card {
+    padding: 18px;
+  }
+
+  .movie-card h2 {
+    font-size: 20px;
+    max-width: 65%;
+  }
+
+  .movie-card > button {
+    padding: 7px 9px;
+  }
+
+  .movie-card select {
+    max-width: 100%;
+  }
+}
